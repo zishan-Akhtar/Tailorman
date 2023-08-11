@@ -188,7 +188,7 @@ main {
   width: 160px;
   height:160px;
   position: absolute;
-  right: -25px;
+  right: -18px;
   top: -48%;
   filter: invert(100);
   animation: rotate 10s linear infinite;
