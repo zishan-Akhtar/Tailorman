@@ -23,6 +23,7 @@
   }
   .left-Hero-section p {
     word-spacing: 3px;
+    margin-top: 5rem;
     width: 100%;
   }
   .call-me {
@@ -44,14 +45,14 @@
     height: 60%;
   }
   .exploremore img {
-    right: -8px;
+    right: -15px;
     top: -29px;
     width: 140px;
     height: 140px;
   }
   .image-Portion2 img {
     right: -15%;
-    bottom: 8%;
+    bottom: 25%;
     max-width: 80%;
   }
   .right-Card-Text {
@@ -106,6 +107,9 @@
 .contact-form {
     width: 80vw;
     
+}
+.dp img {
+  width: 80%;
 }
 .form-control{
     width: 70vw;
