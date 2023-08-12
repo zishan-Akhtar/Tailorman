@@ -1,392 +1,594 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="page.css" />
-    <title>Tailorman</title>
 
-    <!-- PAGE STYLE -->
-    <style>
-            * {
-              padding: 0;
-              margin: 0;
-              box-sizing: border-box;
-              list-style: none;
-              text-decoration: none;
-            }
-            html,
-            body {
-              width: 100%;
-              height: 100%;
-              overflow-x: hidden;
-              background-color: var(--bgColor);
-              color: var(--fontColor);
-              font-family: var(--mainFont);
-              scroll-behavior: smooth;
-            }
-            /* UTILITY CLASS */
-            :root {
-              --fontColor: #fffbfd;
-              --primColor: #fff4e6;
-              --secondColor: #780f1a;
-              --bgColor: #351313;
-              --bgColor1: #3b5998;
-              --mainFont: "Lora", serif;
-              --orderFont: "Montserrat", sans-serif;
-              --padding-block: 10rem;
-            }
-            .flex {
-              display: flex;
-            }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="page.css" />
+  <title>Tailorman</title>
 
-            /* NAVIGATION-SECTION*/
+  <!-- PAGE STYLE -->
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      list-style: none;
+      text-decoration: none;
+    }
 
-            .navigation {
-              padding: 1rem;
-              justify-content: space-between;
-              align-items: center;
-            }
-            .navigation h1 a {
-              font-size: 1.5rem;
-            }
-            .navigation a {
-              color: var(--fontColor);
-            }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
 
-            .nav-ul li {
-              padding: 1.5rem;
-              font-family: var(--orderFont);
-            }
-            .button {
-              padding: 1rem;
-            }
-            .button a {
-              color: black;
-              border-radius: 30px;
-              padding: 0.75rem;
-              font-family: var(--orderFont);
-              background-color: var(--primColor);
-            }
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
 
-            .button span {
-              font-size: 3rem;
-            }
-            /* FEATURE_SECTION */
-            .feature {
-              width: 100vw;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              gap:7rem;
-              /* flex-wrap: wrap; */
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      text-rendering: optimizeSpeed;
+      overflow-x: hidden;
+      background-color: var(--bgColor);
+      color: var(--fontColor);
+      font-family: var(--mainFont);
+      scroll-behavior: smooth;
+    }
 
-            }
-            .feature_textSection {
-              border: 2px solid var(--bgColor1);
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              flex-direction: column;
-              flex-basis: 20%;
-              margin-left:1.5rem ;
-            }
-            .feature_textSection > *{
-              padding-inline: 2rem;
-            }
-            .feature_textSection p{
-              line-height: 28px;
-            }
-            .feature_textSection > :nth-child(2){
-              padding-block: 5rem;
-              line-height: 3rem;
-            }
-            .feature_section {
-              border: 2px solid var(--bgColor1);
-              height:60vh;
-              width: 10vh;
-              flex-basis: 70%;
-              display: flex;
-              gap: 1rem;
-              padding: 2rem;
-            }
-            .feature_section > *{
-              width: 50%;
-            }
-             
-       
-            /* HERO_SECTION */
-            .panels {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              background-color: var(--bgColor1);
-              overflow: hidden;
-              flex: 1;
-              width: 100vw;
-              height: 90vh;
-            }
-            .panel {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              justify-content: space-around;
-              flex: 1;
-              height: 100vh;
-              background-size: cover;
-              background-position: inherit;
-              cursor: pointer;
-              transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-                flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
-            }
-            .panel > * {
-              cursor: pointer;
-              margin: 0;
-              width: 100%;
-              flex: 1 0 auto;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-              font-size: 2rem;
-              color: #fff;
-              font-family: sans-serif;
-              transition: transform 0.5s;
-            }
-            .panel > *:nth-child(2) {
-              font-size: 3rem;
-            }
+    /* UTILITY CLASS */
+    :root {
+      --fontColor: #fffbfd;
+      --primColor: #fff4e6;
+      --secondColor: #780f1a;
+      --bgColor: #351313;
+      --bgColor1: #3b5998;
+      --mainFont: "Lora", serif;
+      --orderFont: "Montserrat", sans-serif;
+      --padding-block: 10rem;
+    }
 
-            .panel > *:first-child {
-              transform: translateY(-100%);
-              /* border: 2px solid red; */
-            }
+    .flex {
+      display: flex;
+    }
 
-            .panel > *:last-child {
-              transform: translateY(100%);
-            }
+    /* NAVIGATION-SECTION*/
 
-            .active > *:first-child {
-              transform: translateY(0);
-            }
-            .active > *:last-child {
-              transform: translateY(0);
-            }
-            .open {
-              flex: 5;
-            }
-            .open > *:nth-child(2) {
-              font-size: 4rem;
-            }
-            .img1 {
-              background-image: url(Asset/478530b4-b501-4a63-9089-60110170e7e5.jpg);
-            }
-            .img2 {
-              background-image: url(Asset/682c7298-cfc9-4fd3-871f-f53fd0df4d7c.jpg);
-            }
-            .img3 {
-              background-image: url(Asset/Ceksуальный\ андроид\ 2B\ в\ свадебном\ облачении.png);
-            }
-            .img4 {
-              background-image: url(Asset/zaki\ ✍️\ on\ Twitter.jpg);
-            }
-            .img5 {
-              background-image: url(Asset/7ea7f6b6-cfc2-4630-9144-5dd75fa60ca8.jpg);
-            }
+    .navigation {
+      padding: 1rem;
+      justify-content: space-between;
+      align-items: center;
+      height: 8vh;
+    }
 
-            .article {
-              height: 100vh;
-              width: 100vw;
-              padding: 2rem;
-            }
-            .bhaashan {
-              text-align: justify;
-            }
-            .bhaashan > *:first-child {
-              text-align: center;
-              padding: 1rem;
-            }
-    </style>
+    .navigation h1 a {
+      font-size: 1.5rem;
+    }
 
-    <!-- MOBILE STYLE -->
-    <style>
-      @media screen and (max-width: 425px) {
-        .navigation {
-          width: 100%;
-          justify-content: space-between;
-        }
-        .panels {
-          flex-direction: column;
-        }
-        .panel {
-          flex-direction: column;
-          width: 100vw;
-          /* gap: 1rem; */
-        }
-        .panel > * {
-          flex-direction: column;
-          font-size: 1rem;
-        }
-        .panel > *:nth-child(2) {
-          font-size: 1.1rem;
-        }
+    .navigation a {
+      color: var(--fontColor);
+    }
 
-        .open {
-          flex: 5;
-        }
-        .open > *:nth-child(2) {
-          font-size: 1.5rem;
-        }
+    .nav-ul li {
+      padding: 1.5rem;
+      font-family: var(--orderFont);
+    }
 
-        .panel > *:first-child {
-          transform: translateX(100%);
-        }
+    .button {
+      padding: 1rem;
+    }
 
-        .panel > *:last-child {
-          transform: translateX(-100%);
-        }
+    .button a {
+      color: black;
+      border-radius: 30px;
+      padding: 0.75rem;
+      font-family: var(--orderFont);
+      background-color: var(--primColor);
+    }
 
-        .active > *:first-child {
-          transform: translateX(0);
-        }
-        .active > *:last-child {
-          transform: translateX(0);
-        }
+    .button span {
+      font-size: 3rem;
+    }
+
+    /* HERO_SECTION */
+    .panels {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--bgColor1);
+      overflow: hidden;
+      flex: 1;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    .panel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      flex: 1;
+      height: 100vh;
+      background-size: cover;
+      background-position: inherit;
+      cursor: pointer;
+      transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
+        flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+    }
+
+    .panel>* {
+      cursor: pointer;
+      margin: 0;
+      width: 100%;
+      flex: 1 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #fff;
+      font-family: sans-serif;
+      transition: transform 0.5s;
+    }
+
+    .panel>*:nth-child(2) {
+      font-size: 3rem;
+    }
+
+    .panel>*:first-child {
+      transform: translateY(-100%);
+      /* border: 2px solid red; */
+    }
+
+    .panel>*:last-child {
+      transform: translateY(100%);
+    }
+
+    .active>*:first-child {
+      transform: translateY(0);
+    }
+
+    .active>*:last-child {
+      transform: translateY(0);
+    }
+
+    .open {
+      flex: 5;
+    }
+
+    .open>*:nth-child(2) {
+      font-size: 4rem;
+    }
+
+    .img1 {
+      background-image: url(Asset/478530b4-b501-4a63-9089-60110170e7e5.jpg);
+    }
+
+    .img2 {
+      background-image: url(Asset/682c7298-cfc9-4fd3-871f-f53fd0df4d7c.jpg);
+    }
+
+    .img3 {
+      background-image: url(Asset/Ceksуальный\ андроид\ 2B\ в\ свадебном\ облачении.png);
+    }
+
+    .img4 {
+      background-image: url(Asset/zaki\ ✍️\ on\ Twitter.jpg);
+    }
+
+    .img5 {
+      background-image: url(Asset/7ea7f6b6-cfc2-4630-9144-5dd75fa60ca8.jpg);
+    }
+
+    /* FEATURE_SECTION */
+    .feature {
+      width: 100%;
+      /* height: 8; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 7rem;
+      padding-top: 5%;
+      background-color: var(--bgColor1);
+      color: var(--bgColor);
+    }
+
+    .feature_textSection {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      flex-basis: 20%;
+      margin-left: 10%;
+    }
+
+    .feature_textSection>* {
+      padding-inline: 2rem;
+    }
+
+    .feature_textSection p {
+      line-height: 28px;
+    }
+
+    .feature_textSection> :nth-child(2) {
+      padding-block: 3rem;
+      line-height: 3rem;
+    }
+
+    .feature_section {
+      flex-basis: 70%;
+      margin: 1rem;
+      width: 100%;
+      background: #344f88;
+      border-radius: 1rem;
+      display: flex;
+      gap: 1rem;
+      padding: 2rem;
+      overflow: hidden;
+    }
+
+    /* ARTICLE SECTION */
+
+    .article {
+      height: 100%;
+      width: 100%;
+      padding: 2rem;
+      font-family: var(--orderFont);
+      background: rgb(53,19,19);
+background: linear-gradient(180deg, rgba(53,19,19,0.9809173669467787) 40%, rgba(59,89,152,1) 100%);
+    }
+    
+    .card{
+      border-radius: 8px;
+      margin-block: .5rem;
+      width: 100%;
+      
+    }
+    .one{
+      color: black;
+      background:#B4F8C8 ;
+    }
+    .two{
+      color: #B4F8C8 ;
+      background:#424651;
+
+    }
+    .three{
+      color: #B4F8C8 ;
+      background:#3B0918;
+    }
+    .four{
+      color: black ;
+      background:#F3E1C0;
+    }
+    .five{
+      color:  #B4F8C8;
+      background:#69124A;
+    }
+
+    .tital-section{
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      padding: .5rem;
+    }
+    .tital-section img{
+      width:3rem;
+      height:3rem;
+      margin: .5rem;
+      object-fit: cover;
+      border-radius: 50%;
+      background-size: cover;
+      background-position: center;
+    }
+    .tital-section_tital h5{
+      opacity: .7;
+    }
+    .testimonial-section p{
+    padding: .5rem;
+    line-height: 1.5rem;
+    
+    word-spacing: .1rem;
+    }
+    footer{
+      background-color: white;
+      color: #3B0918;
+      height: 6vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+  <!-- MOBILE STYLE -->
+  <style>
+    @media screen and (max-width: 425px) {
+      .navigation {
+        width: 100%;
+        justify-content: space-between;
+        height: 9vh;
       }
-    </style>
-  </head>
-  <body>
-    <!-- NAVIGATION-SECTION -->
-    <nav class="navigation flex">
-      <h1><a href="#">TAILORMAN</a></h1>
-      <div class="button">
-        <a href="#">ContactUs </a>
-      </div>
-    </nav>
-    <div class="main">
-      <div class="feature">
-        <div class="feature_textSection">
-          <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-            Quaerat,repellendus unde magni itaque repudiandae assumenda
-          </p>
-          <h1>Lorem ipsum, dolor sit amet consectetur</h1>
-          <p>Lorem, ipsum dolor.</p>
+
+      .panels {
+        flex-direction: column;
+      }
+
+      .panel {
+        flex-direction: column;
+        width: 100vw;
+        /* gap: 1rem; */
+      }
+
+      .panel>* {
+        flex-direction: column;
+        font-size: 1rem;
+      }
+
+      .panel>*:nth-child(2) {
+        font-size: 1.1rem;
+      }
+
+      .open {
+        flex: 5;
+      }
+
+      .open>*:nth-child(2) {
+        font-size: 1.5rem;
+      }
+
+      .panel>*:first-child {
+        transform: translateX(100%);
+      }
+
+      .panel>*:last-child {
+        transform: translateX(-100%);
+      }
+
+      .active>*:first-child {
+        transform: translateX(0);
+      }
+
+      .active>*:last-child {
+        transform: translateX(0);
+      }
+
+      .feature {
+        flex-direction: column;
+        gap: 2rem;
+      }
+
+      .feature_textSection p {
+        font-size: medium;
+      }
+      h4 {
+        font-size: .90rem;
+      }
+      h5{
+        font-size: .80rem;
+      }
+      .testimonial-section p{
+        font-size: .75rem;
+      }
+}
+/* THIS IS  GRID FOR BIG SCREEN SETTING NOT FOR MOBILE SCREEN */
+@media screen and (min-width: 425px) {
+  .testimonials{
+      display: grid;
+      gap: 2rem;
+      grid-template-columns: repeat(4,1fr);
+    }
+    .grid-span-2{
+      grid-column: span 2;
+    }
+    .grid-row-span{
+      grid-column: 4;
+      grid-row: 1/3;
+    }
+}
+  </style>
+
+  <!--OWL COURASEL STYLE  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <!-- NAVIGATION-SECTION -->
+  <nav class="navigation flex">
+    <h1><a href="#">TAILORMAN</a></h1>
+    <div class="button">
+      <a href="#">ContactUs </a>
+    </div>
+  </nav>
+  
+  <!-- MAIN HERO SECTION -->
+  
+  <div class="main">
+    <div class="hero">
+      <div class="panels">
+        <div class="panel img1">
+          <p>LET</p>
+          <p>MAKE</p>
+          <p>WORK</p>
         </div>
-        <div class="feature_section">
-          <img src="AssetsForTaiormanDesign02/TailorDesignWebpageTamplet02.webp" alt="">
-          <img src="AssetsForTaiormanDesign02/TailorDesignWebpageTamplet02.webp" alt="">
-          <img src="AssetsForTaiormanDesign02/TailorDesignWebpageTamplet02.webp" alt="">
+        <div class="panel img2">
+          <p>LET</p>
+          <p>MAKE</p>
+          <p>WORK</p>
         </div>
-      </div>
-      <div class="hero">
-        <div class="panels">
-          <div class="panel img1">
-            <p>LET</p>
-            <p>MAKE</p>
-            <p>WORK</p>
-          </div>
-          <div class="panel img2">
-            <p>LET</p>
-            <p>MAKE</p>
-            <p>WORK</p>
-          </div>
-          <div class="panel img3">
-            <p>LET</p>
-            <p>MAKE</p>
-            <p>WORK</p>
-          </div>
-          <div class="panel img4">
-            <p>LET</p>
-            <p>MAKE</p>
-            <p>WORK</p>
-          </div>
-          <div class="panel img5">
-            <p>LET</p>
-            <p>MAKE</p>
-            <p>WORK</p>
-          </div>
+        <div class="panel img3">
+          <p>LET</p>
+          <p>MAKE</p>
+          <p>WORK</p>
         </div>
-      </div>
-      <div class="article">
-        <div class="bhaashan">
-          <h1>YOHOOO</h1>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed magnam
-            obcaecati aperiam ducimus sit ut voluptate vitae corrupti,
-            assumenda, saepe dicta eos cumque placeat! Sequi alias nobis
-            perspiciatis iure voluptatem ea fugiat quis inventore deleniti.
-            Nostrum porro enim facilis, cupiditate non veritatis ipsam suscipit.
-            Quasi reprehenderit excepturi recusandae, alias enim sed nam quod
-            unde consequuntur quo quam impedit explicabo, fugiat mollitia dicta
-            magni asperiores nihil possimus eius assumenda odit! Deserunt,
-            placeat. Ad nam, numquam earum dignissimos aut ut ipsa consequuntur
-            sit delectus quibusdam similique non perspiciatis a, est rem dolore
-            praesentium cupiditate deserunt laborum esse vel, reprehenderit
-            fugiat! Voluptatibus eveniet labore quidem accusantium atque eos
-            ducimus aliquam itaque, dolore eius! Omnis repellendus iste alias in
-            rem eaque a aspernatur laboriosam corporis libero molestiae
-            consequuntur saepe, est ipsum aliquid expedita nobis quae cumque
-            perferendis quidem quasi. Veniam sunt explicabo laboriosam iusto
-            corrupti nam quibusdam quisquam, quaerat omnis quidem? Aspernatur
-            perferendis expedita inventore cum consectetur vero in deserunt
-            consequuntur. Sunt quasi eius quae deserunt! Ad fugit cupiditate
-            officia totam atque ex tempore vel, error exercitationem! Omnis est
-            laboriosam doloribus nostrum molestias eum ab, quibusdam ea
-            reiciendis suscipit, necessitatibus animi praesentium, neque ipsum
-            sit doloremque enim? Quo maiores numquam, facere provident fugit
-            dolore culpa, blanditiis delectus odit consectetur dolorem eius
-            laborum aut architecto doloribus illo? Distinctio sapiente adipisci
-            doloribus, sit error, porro illo sunt labore quae dolor obcaecati at
-            asperiores impedit molestias voluptatibus nisi consequatur deserunt
-            eligendi natus! Ipsa unde pariatur, corrupti velit earum autem
-            dicta, placeat at repellendus animi inventore sequi, quidem nisi
-            qui? Culpa nostrum alias fugit veniam modi quis ex aperiam veritatis
-            accusantium maiores, illo recusandae, labore debitis doloremque.
-            Illum, maxime. Aliquam, similique, totam ipsam placeat et vitae
-            inventore ullam eligendi distinctio, amet eius quam porro. Aperiam
-            quis corrupti cum minus expedita quos? Asperiores obcaecati nemo
-            fuga sunt officiis modi nisi, nobis eum animi. Labore cumque
-            excepturi, libero incidunt nisi quisquam eaque, distinctio
-            voluptatum sequi odit dolor nihil quos facilis inventore,
-            reprehenderit nesciunt necessitatibus ipsa quae qui voluptatibus
-            reiciendis voluptas! Culpa corporis, possimus minima dignissimos
-            expedita reiciendis libero! Vitae minima temporibus molestiae omnis
-            fugiat, officiis doloremque tempora quidem praesentium quas esse
-            aperiam ipsum ut a. Ipsam aspernatur dolores quibusdam aperiam
-            excepturi a magnam, qui officia, voluptas omnis repellat officiis
-            fugiat numquam sapiente laborum adipisci exercitationem iste
-            temporibus sit velit minus. Nulla in, vero omnis porro obcaecati
-            fuga autem sequi delectus sit, maiores eligendi tempore laboriosam
-            ad numquam, at dolor quasi quam voluptatem facere nobis totam maxime
-            quis accusantium hic. Impedit officia at beatae dolorem officiis
-            magnam fugit voluptates eum ex eaque perferendis modi suscipit, quis
-            blanditiis, ratione enim assumenda tempore cumque ab quia sapiente.
-            Eius velit fugit adipisci esse, facere tempore illum corporis
-            blanditiis aliquam distinctio perferendis sit impedit. Excepturi,
-            incidunt. Officia quae at ab dolorem odio? Perferendis quia et
-            tempore maiores magni ex, eligendi velit reprehenderit optio? Quas
-            similique vel dolor perspiciatis ducimus architecto at, eligendi
-            blanditiis? Accusantium, incidunt minus animi saepe inventore
-            repellendus at! At, praesentium? Facilis, porro illo quam esse sunt
-            nemo nulla debitis voluptatem sequi. Facere?
-          </p>
+        <div class="panel img4">
+          <p>LET</p>
+          <p>MAKE</p>
+          <p>WORK</p>
+        </div>
+        <div class="panel img5">
+          <p>LET</p>
+          <p>MAKE</p>
+          <p>WORK</p>
         </div>
       </div>
     </div>
 
-    <script>
-      //THIS IS FOR PANEL P TAG TRANSITION JS
-      const panels = document.querySelectorAll(".panel");
+    <!-- ARTICLE SECTION -->
 
-      function toggleOpen() {
-        this.classList.toggle("open");
-      }
-      function toggleActive() {
-        this.classList.toggle("active");
-      }
+    <div class="article">
+      <div class="testimonials">
+        <div class="card one grid-span-2">
+          <div class="tital-section">
+            <img src="Asset/@wallandiadesk (2).jpg">
+            <div class="tital-section_tital">
+              <h4>ZISHAN AKHTAR</h4>
+              <h5> Web Developer</h5>
+            </div>
+          </div>
+          <div class="testimonial-section">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, pariatur. Totam recusandae est dolor nihil officia sit exercitationem magnam culpa veritatis. Pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta illum quam officia totam natus distinctio voluptates. Consectetur saepe labore vero.</p>
+          </div>
+        </div>
 
-      panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
-      panels.forEach((panel) => panel.addEventListener("click", toggleActive));
-    </script>
-  </body>
+        <div class="card two">
+          <div class="tital-section">
+            <img src="Asset/@wallandiadesk (2).jpg">
+            <div class="tital-section_tital">
+              <h4>ZISHAN AKHTAR</h4>
+              <h5> Web Developer</h5>
+            </div>
+          </div>
+          <div class="testimonial-section">
+            <p> Atque, pariatur. Totam recusandae veritatis. Pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta illum . Consectetur saepe labore vero.</p>
+          </div>
+        </div>
+
+        <div class="card three grid-row-span">
+          <div class="tital-section">
+            <img src="Asset/@wallandiadesk (2).jpg">
+            <div class="tital-section_tital">
+              <h4>ZISHAN AKHTAR</h4>
+              <h5> Web Developer</h5>
+            </div>
+          </div>
+          <div class="testimonial-section">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, pariatur. Totam recusandae est dolor nihil officia sit exercitationem magnam culpa veritatis. Pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta illum quam officia totam natus distinctio voluptates. Consectetur saepe labore vero.</p>
+          </div>
+        </div>
+
+        <div class="card four">
+          <div class="tital-section">
+            <img src="Asset/@wallandiadesk (2).jpg">
+            <div class="tital-section_tital">
+              <h4>ZISHAN AKHTAR</h4>
+              <h5> Web Developer</h5>
+            </div>
+          </div>
+          <div class="testimonial-section">
+            <p> Atque, pariatur. Totam recusandae veritatis. Pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta illum . Consectetur saepe labore vero.</p>
+          </div>
+        </div>
+
+        <div class="card five grid-span-2 ">
+          <div class="tital-section">
+            <img src="Asset/@wallandiadesk (2).jpg">
+            <div class="tital-section_tital">
+              <h4>ZISHAN AKHTAR</h4>
+              <h5> Web Developer</h5>
+            </div>
+          </div>
+          <div class="testimonial-section">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque, pariatur. Totam recusandae est dolor nihil officia sit exercitationem magnam culpa veritatis. Pariatur? Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta illum quam officia totam natus distinctio voluptates. Consectetur saepe labore vero.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    <!-- FEATURE SECTION -->
+
+    <div class="feature">
+      <div class="feature_textSection">
+        <p>
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          Quaerat,repellendus unde magni itaque repudiandae assumenda
+        </p>
+        <h1>Lorem ipsum, dolor sit amet consectetur</h1>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div class="feature_section">
+        <div class="owl-carousel owl-theme">
+          <div class="item"><img src="Asset/@wallandiadesk (2).jpg" alt=""></div>
+          <div class="item"><img src="Asset/@wallandiadesk (3).jpg" alt=""></div>
+          <div class="item"><img src="Asset/@wallandiadesk (5).jpg" alt=""></div>
+          <div class="item"><img src="Asset/@wallandiadesk (5).jpg" alt=""></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER SECTION -->
+  <footer>
+    Copyright ©<a href="https://zishan-akhtar.github.io/Portpholio/"
+    target="_blank">Zishan Akhtar</a>All rights reserved!
+  </footer>
+
+  <script>
+    //THIS IS FOR PANEL P TAG TRANSITION JS
+    const panels = document.querySelectorAll(".panel");
+
+    function toggleOpen() {
+      this.classList.toggle("open");
+    }
+    function toggleActive() {
+      this.classList.toggle("active");
+    }
+
+    panels.forEach((panel) => panel.addEventListener("click", toggleOpen));
+    panels.forEach((panel) => panel.addEventListener("click", toggleActive));
+  </script>
+
+  <!-- OWL COURSEL CDN & JS CODE-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+  </script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: false,
+      autoplay: true,
+      autoplayTimeout: 2000,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1,
+        },
+        600: {
+          items: 1,
+          stagePadding: 50
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+</body>
+
 </html>
