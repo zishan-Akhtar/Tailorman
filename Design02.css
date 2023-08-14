@@ -30,7 +30,7 @@ body {
   --orderFont: "Montserrat", sans-serif;
   --padding-block: 10rem;
 
-  --cardBg:#E5CEF6 ;
+  --cardBg:#E9D8E1 ;
 }
 
 .flex {
@@ -48,6 +48,11 @@ body {
   align-items: center;
   z-index: 3;
 }
+.primaryButton {
+  font-size: 2rem;
+  color: black;
+}
+
 
 .arrow {
   color: black;
@@ -247,8 +252,8 @@ main {
 .image-Portion2 img {
   max-width: 100%;
   position: absolute;
-  right: 16%;
-  bottom: 18%;
+  right: 18%;
+  bottom: 39%;
 }
 
 .right-Card-Text {
@@ -453,9 +458,13 @@ hr {
   font-weight: 500;
   border: none;
   background-color:#381333;
-  color: #E5CEF6;
+  color: #E9D8E1;
   border-radius: 2px;
   cursor: pointer;
+}
+.txt_button:hover {
+  transition: .5s ease-in-out;
+  background-color: #6c2663;
 }
 
 .txt_button-m {
@@ -464,7 +473,14 @@ hr {
   font-size: 1.1rem;
   font-weight: 500;
   border: none;
+  color:#381333;
+  cursor: pointer;
   border-radius: 2px;
+}
+.txt_button-m:hover {
+  background-color:#381333;
+  color:#E9D8E1;
+  transition: .5s ease-out;
 }
 
 .mirror {
@@ -494,6 +510,13 @@ hr {
   flex-basis: 50%;
   border-radius: 2.5px;
   background-color: var(--cardBg);
+  transition: transform 0.7s ease-in-out;
+}
+.card:hover .img{
+  transform: scale(1.1);
+}
+.middle:hover .img{
+  transform: scale(1.1);
 }
 
 .middle {
@@ -502,6 +525,7 @@ hr {
   display: flex;
   flex-direction: column-reverse;
   width: 80%;
+  transition: transform 0.7s ease-in-out;
 }
 
 .txt {
@@ -526,6 +550,7 @@ hr {
 .img {
   width: 100%;
   flex-basis: 50%;
+  transition: transform 0.7s ease-in-out;
 }
 
 .img img {
