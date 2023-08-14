@@ -1,35 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora&family=Montserrat&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
 * {
   padding: 0;
   margin: 0;
   list-style: none;
   text-decoration: none;
 }
+
 html {
   overflow-x: hidden;
 }
+
 body {
   background-color: var(--bgColor);
   color: var(--fontColor);
   font-family: var(--mainFont);
   scroll-behavior: smooth;
 }
+
 /* UTILITY CLASS */
 :root {
   --fontColor: #fffbfd;
   --primColor: #fff4e6;
   --secondColor: #780f1a;
   --bgColor: #351313;
-  --bgColor1:#3b5998;
+  --bgColor1: #3b5998;
   --mainFont: "Lora", serif;
   --orderFont: "Montserrat", sans-serif;
   --padding-block: 10rem;
+
+  --cardBg:#E5CEF6 ;
 }
 
 .flex {
   display: flex;
 }
+
 .primaryButton {
   background-color: #fff4e6;
   border-radius: 50%;
@@ -41,6 +48,7 @@ body {
   align-items: center;
   z-index: 3;
 }
+
 .arrow {
   color: black;
   font-size: 2rem;
@@ -50,9 +58,11 @@ body {
 .left-animation {
   transform: translatex(-100%);
 }
+
 .right-animation {
   transform: translatex(100%);
 }
+
 .hidden {
   opacity: 0;
   filter: blur(5px);
@@ -72,9 +82,11 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
 .navigation h1 a {
   font-size: 1.5rem;
 }
+
 .navigation a {
   color: var(--fontColor);
 }
@@ -83,9 +95,11 @@ body {
   padding: 1.5rem;
   font-family: var(--orderFont);
 }
+
 .button {
   padding: 1rem;
 }
+
 .button a {
   color: black;
   border-radius: 30px;
@@ -102,9 +116,11 @@ body {
 main {
   padding-inline: 5rem;
 }
+
 .rapper {
   gap: 1rem;
 }
+
 .main-Heading {
   font-size: 2.5rem;
   word-spacing: 10px;
@@ -113,12 +129,14 @@ main {
 .left-Hero-section {
   flex-basis: 40%;
 }
+
 .left-Hero-section p {
   font-family: var(--orderFont);
   margin-block: 2rem;
-  line-break:anywhere;
+  line-break: anywhere;
   line-height: 1.5rem;
 }
+
 .call-me {
   font-family: var(--orderFont);
   background-color: #551e1e;
@@ -130,14 +148,16 @@ main {
   justify-content: space-between;
   align-items: center;
 }
+
 .call-me a {
   background: white;
   color: black;
-  padding: .85rem;
+  padding: 0.85rem;
   border-radius: 10px;
   cursor: pointer;
   text-align: center;
 }
+
 .left-Card {
   color: black;
   background-color: var(--primColor);
@@ -148,9 +168,11 @@ main {
   margin-block: 6rem;
   position: relative;
 }
+
 .image-Portion {
   flex-basis: 60%;
 }
+
 .image-Portion img {
   max-width: 70%;
   display: block;
@@ -158,20 +180,24 @@ main {
   bottom: -20%;
   left: -15%;
 }
+
 .text-Portion {
   flex-basis: 40%;
   flex-direction: column;
   text-align: start;
   justify-content: space-around;
 }
+
 .text-Portion a {
   color: black;
   text-decoration: underline;
   font-family: var(--orderFont);
 }
+
 .right-Hero-Section {
   flex-basis: 60%;
 }
+
 .right-Card {
   background-color: var(--secondColor);
   width: 78%;
@@ -180,48 +206,56 @@ main {
   justify-content: space-around;
   z-index: 1;
 }
-.circle{
-  position: relative;
 
+.circle {
+  position: relative;
 }
+
 .exploremore img {
-  width: 160px;
-  height:160px;
+  width: 8.75rem;
+  height: 8.75rem;
   position: absolute;
-  right: -24px;
-  top: -48%;
+  right: -29px;
+  top: -38%;
   filter: invert(100);
   animation: rotate 10s linear infinite;
   z-index: 2;
 }
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
+
 .text-Portion2 {
   justify-content: space-around;
   flex-direction: column;
 }
+
 .text-Portion2 p {
   line-height: 30px;
   letter-spacing: 2px;
   font-size: 1.5rem;
   font-family: var(--orderFont);
 }
+
 .image-Portion2 img {
   max-width: 100%;
   position: absolute;
   right: 16%;
   bottom: 18%;
 }
+
 .right-Card-Text {
   font-family: var(--orderFont);
   padding-block: 1rem;
 }
+
 .right-Card-Text p {
   padding-block: 1rem;
   line-height: 1.7rem;
@@ -244,138 +278,117 @@ main {
   pointer-events: none;
   transition: all 0.4s;
 }
+
 .tapToTop span {
   color: #fff;
   font-size: 2rem;
   text-decoration: none;
 }
+
 span.active {
   opacity: 0;
   pointer-events: none;
   transition: all 0.4s;
 }
+
 .tapToTop.active {
   pointer-events: auto;
   opacity: 1;
+  z-index: 1000;
   transition: all 0.4s;
 }
+
+article {
+  margin-block: 2rem;
+}
+
 .left-aricle {
   width: 40%;
   padding: 50px;
   flex-direction: column;
 }
+
 .left-aricle h2,
 p {
   padding-block: 1rem;
   font-family: var(--orderFont);
 }
-.left-aricle p{
+
+.left-aricle p {
   line-height: 1.5rem;
   text-align: justify;
 }
+
 section {
   justify-content: center;
   align-items: center;
 }
+
 section ul li {
   font-family: var(--orderFont);
 }
+
 section ul li h3 {
   font-family: var(--mainFont);
 }
+
 .left-article-ul-1,
 .left-article-ul-2 {
-  padding: .25rem;
+  padding: 0.25rem;
 }
-.left-article-ul-1 > *{
-  padding-block: .25rem;
+
+.left-article-ul-1>* {
+  padding-block: 0.25rem;
 }
-.left-article-ul-2 > *{
-  padding-block: .25rem;
+
+.left-article-ul-2>* {
+  padding-block: 0.25rem;
 }
+
 .right-aricle {
   width: 40%;
-
 }
+
 .right-aricle img {
   width: 100%;
   height: 60%;
   object-fit: cover;
-  background-position:center;
+  background-position: center;
   padding: 1rem;
 }
-/* -- SHOWOFFSECTION -- */
-.showoff {
-  color: var(--bgColor);
-}
 
-.showoff-plate {
-  background: #c5c5c5;
-  /* background: #1d1b1b; */
-  border-radius: 1rem;
-  justify-content: space-around;
-  overflow-x: hidden;
-  margin: auto;
-}
-
-.contant {
-  flex-basis: 40%;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-}
-.contant p{
-  text-align: justify;
-}
-
-.contant h2, p{
-  padding: 1rem 1rem 1rem 0.3rem;
-}
-
-.style {
-  flex-basis: 40%;
-  justify-content: center;
-  align-items: center;
-}
-
-#iPhone {
-  padding: 1rem;
-}
-.iPhone-img {
-  width: 32%;
-  height: 85%;
-  position: relative;
-  bottom: 3px;
-  border-radius: 10px;
-  right: 203px;
-}
+/* CONTACT */
 .contact {
   margin-block: 2rem;
   text-align: center;
   gap: 2rem;
 }
-.contact-form{
+
+.contact-form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .social-media {
   flex-basis: 40%;
-
 }
- #contact-tital{
+
+#contact-tital {
   font-size: 40px;
   border: 2px solid white;
   border-radius: 8px;
   color: var(--fontColor);
   margin-top: 2rem;
-  text-align: center
+  text-align: center;
 }
+
 .dp img {
-  width:10vw;
-  object-fit: cover; 
-  padding-right:2rem ;
+  width: 10vw;
+  object-fit: cover;
+  padding-right: 2rem;
 }
+
 .semi-circle {
   margin: 5px;
   background-color: var(--bgColor1);
@@ -386,6 +399,7 @@ section ul li h3 {
   justify-content: center;
   transition: all 0.2s ease-in-out;
 }
+
 .antisemi-circle {
   width: 10rem;
   height: 5rem;
@@ -396,20 +410,124 @@ section ul li h3 {
   justify-content: center;
   transition: all 0.2s ease-in-out;
 }
+
 .antisemi-circle:hover,
 .semi-circle:hover {
   transform: scale(1.1);
 }
+
 i {
   font-size: 3rem;
   color: white;
 }
 
-footer{
+footer {
   background-color: white;
-  color: #3B0918;
+  color: #3b0918;
   height: 6vh;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+
+.window-tital {
+  text-align: center;
+  letter-spacing: .2rem;
+
+}
+
+hr {
+  margin-bottom: 2rem;
+}
+
+.txt_h1,
+.txt_h3 {
+  text-align: center;
+  font-weight: 600;
+}
+
+.txt_button {
+  padding: 0.7rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  background-color:#381333;
+  color: #E5CEF6;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.txt_button-m {
+  padding: 0.7rem;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 2px;
+}
+
+.mirror {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  color:#381333;
+  font-family: var(--orderFont);
+}
+
+.contain {
+  width: 100%;
+  height: 100%;
+}
+
+.box {
+  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  flex-basis: 50%;
+  border-radius: 2.5px;
+  background-color: var(--cardBg);
+}
+
+.middle {
+  border-radius: 2.5px;
+  background-color: var(--cardBg);
+  display: flex;
+  flex-direction: column-reverse;
+  width: 80%;
+}
+
+.txt {
+  flex-basis: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.txt-m {
+  display: flex;
+  flex-basis: 50%;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.img {
+  width: 100%;
+  flex-basis: 50%;
+}
+
+.img img {
+  width: 100%;
 }

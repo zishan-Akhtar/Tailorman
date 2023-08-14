@@ -45,8 +45,8 @@
     height: 60%;
   }
   .exploremore img {
-    right: -15px;
-    top: -29px;
+    right: -1.75rem;
+    top: -1.875rem;
     width: 140px;
     height: 140px;
   }
@@ -75,22 +75,6 @@
   .right-aricle img {
     max-width: 91%;
   }
-  .showoff-plate{
-    flex-direction: column;
-  }
-  .p {
-    padding-top: 1rem;
-  }
-  #iPhone {
-    margin-left: 40%;
-}
-.iPhone-img {
-    right: 205px;
-    width: 45%;
-    top: -2px;
-    height: 56vh;
-    border-radius: 18px;
-}
 .contact{
     flex-direction: column;
 }
@@ -114,4 +98,13 @@
 .form-control{
     width: 70vw;
 }
+
+.mirror {
+  flex-wrap: wrap;
+}
+.middle{
+  flex-direction: row;
+  width: 100%;
+}
+
 }
