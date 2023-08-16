@@ -94,94 +94,6 @@
     }
 
     /* HERO_SECTION */
-    /* .panels {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--bgColor1);
-        overflow: hidden;
-        flex: 1;
-        width: 100vw;
-        height: 100vh;
-      }
-
-      .panel {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        flex: 1;
-        height: 100vh;
-        background-size: cover;
-        background-position: center;
-        cursor: pointer;
-        transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11),
-          flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
-      }
-
-      .panel > * {
-        cursor: pointer;
-        margin: 0;
-        width: 100%;
-        flex: 1 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-        color: #fff;
-        font-family: sans-serif;
-        transition: transform 0.5s;
-      }
-
-      .panel > *:nth-child(2) {
-        font-size: 3rem;
-      }
-
-      .panel > *:first-child {
-        transform: translateY(-100%);
-      }
-
-      .panel > *:last-child {
-        transform: translateY(100%);
-      }
-
-      .active > *:first-child {
-        transform: translateY(0);
-      }
-
-      .active > *:last-child {
-        transform: translateY(0);
-      }
-
-      .open {
-        flex: 5;
-      }
-
-      .open > *:nth-child(2) {
-        font-size: 4rem;
-      }
-
-      .img1 {
-        background-image: url(Asset/designer-love-date-giftforgirlfriends01.jpg);
-      }
-
-      .img2 {
-        background-image: url(Asset/Formal\ Gowns02.jpg);
-      }
-
-      .img3 {
-        background-image: url(Asset/silver-zari-georgette-pink-sharara-suit-lstv112068-03.webp);
-      }
-
-      .img4 {
-        background-image: url(Asset/Indian-party-wear-salwar-suit-for-ladies-04.jpg);
-      }
-
-      .img5 {
-        background-image: url(Asset/wedding-trending-women-dress-05.jpg);
-      } */
-
-
     .panels {
       min-height: 100vh;
       overflow: hidden;
@@ -563,10 +475,10 @@
         border-radius: 18px;
       }
     }
-  }
+  
 
     /* THIS IS  GRID FOR BIG SCREEN SETTING NOT FOR MOBILE SCREEN */
-    @media screen and (max-width: 425px) {
+    @media screen and (min-width: 425px) {
       .testimonials {
         display: grid;
         gap: 2rem;
@@ -617,7 +529,7 @@
           <p>GLOW</p>
           <p>WITH</p>
           <p>BEAUTY</p>
-        </div>
+      </div>
         <div class="panel img3">
           <p>SHOW</p>
           <p>YOUR</p>
