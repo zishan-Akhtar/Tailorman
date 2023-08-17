@@ -4,9 +4,8 @@ make and new section to website .✅
 find images .✅
 change color gradiant pf back ground that match the theme also .✅ 
 do some twikn=ing like adding image in hero section, changing position of rotate button and do some color twiking in testimonials ✅
+merger i phone and photo then show it .✅
 
-
-merger i phone and photo then show it .
 change position of some section bring testimonial and feature section to front page and push contact section to page.html.
 on mobile screen page.html main section didnt work and if you give padding to price section than form right side remove it else give padding from left section moral of the story make price section to center.
 collect five photo on pc screen  for starters.
