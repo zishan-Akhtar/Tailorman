@@ -9,3 +9,4 @@ on mobile screen page.html main section didnt work and if you give padding to pr
 
 collect five photo on pc screen  for starters.
 change position of some section bring testimonial and feature section to front page and push contact section to page.html.
+opacity ko 5 kar de phone mai kuch nahi dikh raha hai.

@@ -362,7 +362,7 @@ section ul li h3 {
 }
 
 /* CONTACT */
-.contact {
+/* .contact {
   margin-block: 2rem;
   text-align: center;
   gap: 2rem;
@@ -423,7 +423,7 @@ section ul li h3 {
 i {
   font-size: 3rem;
   color: white;
-}
+} */
 
 /* TESTIMONIAL ARTICLE SECTION */
 .article {
@@ -442,6 +442,10 @@ i {
   border-radius: 8px;
   margin-block: 0.5rem;
   width: 100%;
+}
+.t-card :last-child{
+  margin: 0;
+
 }
 
 .one {
@@ -493,7 +497,6 @@ i {
 .testimonial-section p {
   padding: 0.5rem;
   line-height: 1.5rem;
-
   word-spacing: 0.1rem;
 }
 

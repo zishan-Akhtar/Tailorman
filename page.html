@@ -182,6 +182,76 @@
       font-size: 40px;
     }
 
+    /* CONTACT */
+    .contact {
+      margin-block: 2rem;
+      text-align: center;
+      justify-content: center;
+      gap: 2rem;
+    }
+
+    .contact-form {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .social-media {
+      flex-basis: 40%;
+    }
+
+    #contact-tital {
+      font-size: 40px;
+      border: 2px solid white;
+      border-radius: 8px;
+      color: var(--fontColor);
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .dp img {
+      width: 10vw;
+      object-fit: cover;
+      padding-right: 2rem;
+    }
+
+    .semi-circle {
+      margin: 5px;
+      background-color: var(--bgColor1);
+      width: 10rem;
+      height: 5rem;
+      border-radius: 10rem 10rem 0 0;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .antisemi-circle {
+      width: 10rem;
+      height: 5rem;
+      margin: 5px;
+      background-color: #25d366;
+      border-radius: 0 0 10rem 10rem;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .antisemi-circle:hover,
+    .semi-circle:hover {
+      transform: scale(1.1);
+    }
+
+    #whatsapp img {
+      width: 3rem;
+     filter: invert(100);
+    }
+    #facebook img {
+      width: 3rem;
+     filter: invert(100);
+    }
+
+
     footer {
       background-color: white;
       color: #3b0918;
@@ -229,15 +299,6 @@
 
     #iPhone {
       padding: 1rem;
-    }
-
-    .iPhone-img {
-      width: 32%;
-      height: 85%;
-      position: relative;
-      bottom: 3px;
-      border-radius: 10px;
-      right: 203px;
     }
 
     #table-box {
@@ -318,6 +379,7 @@
       .active>*:last-child {
         transform: translatex(0);
       }
+
       /* SHOWOFF MOBILE SCREEN */
 
       .showoff-plate {
@@ -327,13 +389,38 @@
       .p {
         padding-top: 1rem;
       }
+      #iPhone {
+        width: 100%;
+      }
 
-      .iPhone-img {
-        right: 205px;
-        width: 45%;
-        top: -2px;
-        height: 56vh;
-        border-radius: 18px;
+
+      /* CONTACT */
+      .contact {
+        flex-wrap: wrap;
+      }
+
+      .contact h1 {
+        font-size: 2.5rem;
+      }
+
+      .profile {
+        width: 80vw;
+        justify-content: space-around;
+        align-items: center;
+
+      }
+
+      .contact-form {
+        width: 80vw;
+
+      }
+
+      .dp img {
+        width: 80%;
+      }
+
+      .form-control {
+        width: 70vw;
       }
     }
   </style>
@@ -543,43 +630,37 @@
         </tbody>
       </table>
     </div>
-    <!-- FEATURE SECTION -->
-
-    <!-- 
-      <div class="feature_textSection">
-        <p>
-          "For 150 years, our family's enchanting journey in this business has
-          woven a legacy of excellence. Renowned in our craft, we possess a
-          unique gift – the ability to craft impeccable suits, perfectly
-          fitted by sight alone. Through generations, we've mastered the art
-          of creating elegance that transcends measurements, leaving an
-          indelible mark in the world of tailoring."
-        </p>
-        <h1 style="font-family: var(--orderFont); color: var(--fontColor)">
-          TailorMan: Crafting Elegance Across Generations
-        </h1>
-        <p style="font-family: var(--orderFont)">
-          Thank You for Your Gracious Visit
-        </p>
-      </div>
-      <div class="feature_section">
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="Asset/@wallandiadesk (2).jpg" alt="" />
+    <!-- CONTACT -->
+    <a href="https://wa.me/9818675862">
+      <h1 id="contact-tital">CONTACT</h1>
+    </a>
+    <section class="contact flex">
+      <div class="social-media flex">
+        <div class="profile flex">
+          <div class="dp right-animation hidden">
+            <img src="AssetsForTaiormanDesign02/80659752632.png" alt="img" />
           </div>
-          <div class="item">
-            <img src="Asset/@wallandiadesk (3).jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="Asset/@wallandiadesk (5).jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="Asset/@wallandiadesk (5).jpg" alt="" />
+          <div class="contact-form flex">
+            <h2>Faridabad</h2>
+            <p>FCA-803/H Block-C S.G.M Nagar Near Patel Chowk</p>
+            <div class="button">
+              <a href="https://wa.me/9818675862">ContactUs </a>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div> -->
+      <div class="sociallinks left-animation hidden">
+        <div class="semi-circle flex">
+          <a id="facebook" href="https://www.facebook.com/Tailorman1978"><img src="AssetsForTaiormanDesign02/facebook.png" alt="facebook-whatsapp-of-tailorman-for ladies tailor"></a>
+        </div>
+        <div class="antisemi-circle flex">
+          <a id="whatsapp" href="https://wa.me/9818675862"><img src="AssetsForTaiormanDesign02/whatsapp.png" alt="whatsapp-facebook-of-tailorman-for ladies tailor"></a>
+        </div>
+      </div>
+
+    </section>
+  </div>
+
 
   <!-- FOOTER SECTION -->
   <footer>
