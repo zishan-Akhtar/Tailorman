@@ -120,24 +120,24 @@
     }
 
     .img1 {
-        background-image: url(Asset/designer-love-date-giftforgirlfriends01.jpg);
-      }
+      background-image: url(Asset/designer-love-date-giftforgirlfriends01.jpg);
+    }
 
-      .img2 {
-        background-image: url(Asset/Formal\ Gowns02.jpg);
-      }
+    .img2 {
+      background-image: url(Asset/Formal\ Gowns02.jpg);
+    }
 
-      .img3 {
-        background-image: url(Asset/silver-zari-georgette-pink-sharara-suit-lstv112068-03.webp);
-      }
+    .img3 {
+      background-image: url(Asset/silver-zari-georgette-pink-sharara-suit-lstv112068-03.webp);
+    }
 
-      .img4 {
-        background-image: url(Asset/Indian-party-wear-salwar-suit-for-ladies-04.jpg);
-      }
+    .img4 {
+      background-image: url(Asset/Indian-party-wear-salwar-suit-for-ladies-04.jpg);
+    }
 
-      .img5 {
-        background-image: url(Asset/wedding-trending-women-dress-05.jpg);
-      }
+    .img5 {
+      background-image: url(Asset/wedding-trending-women-dress-05.jpg);
+    }
 
     /* Flex Items */
     .panel>* {
@@ -180,126 +180,6 @@
     .panel.open {
       flex: 5;
       font-size: 40px;
-    }
-
-    /* FEATURE_SECTION */
-    .feature {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 7rem;
-      padding-top: 5%;
-      background-color: var(--bgColor1);
-      color: var(--bgColor);
-    }
-
-    .feature_textSection {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: column;
-      flex-basis: 20%;
-      margin-left: 10%;
-    }
-
-    .feature_textSection>* {
-      padding-inline: 2rem;
-    }
-
-    .feature_textSection p {
-      line-height: 1.5rem;
-      text-align: justify;
-    }
-
-    .feature_textSection> :nth-child(2) {
-      padding-block: 3rem;
-      text-align: start;
-      line-height: 2rem;
-    }
-
-    .feature_section {
-      flex-basis: 70%;
-      margin: 1rem;
-      width: 100%;
-      background: #344f88;
-      border-radius: 1rem;
-      display: flex;
-      gap: 1rem;
-      padding: 2rem;
-      overflow: hidden;
-    }
-
-    /* ARTICLE SECTION */
-
-    .article {
-      height: 100%;
-      width: 100%;
-      padding: 2rem;
-      font-family: var(--orderFont);
-      background: rgb(53, 19, 19);
-      background: linear-gradient(180deg,
-          rgba(53, 19, 19, 0.9809173669467787) 40%,
-          rgba(59, 89, 152, 1) 100%);
-    }
-
-    .card {
-      border-radius: 8px;
-      margin-block: 0.5rem;
-      width: 100%;
-    }
-
-    .one {
-      color: black;
-      background: #b4f8c8;
-    }
-
-    .two {
-      color: #b4f8c8;
-      background: #424651;
-    }
-
-    .three {
-      color: #b4f8c8;
-      background: #3b0918;
-    }
-
-    .four {
-      color: black;
-      background: #f3e1c0;
-    }
-
-    .five {
-      color: #b4f8c8;
-      background: #69124a;
-    }
-
-    .tital-section {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      padding: 0.5rem;
-    }
-
-    .tital-section img {
-      width: 3rem;
-      height: 3rem;
-      margin: 0.5rem;
-      object-fit: cover;
-      border-radius: 50%;
-      background-size: cover;
-      background-position: center;
-    }
-
-    .tital-section_tital h5 {
-      opacity: 0.7;
-    }
-
-    .testimonial-section p {
-      padding: 0.5rem;
-      line-height: 1.5rem;
-
-      word-spacing: 0.1rem;
     }
 
     footer {
@@ -407,19 +287,22 @@
         /* flex-direction: row; */
         font-size: 1em;
       }
-      
+
       .panel p:nth-child(2) {
         font-size: 3em;
       }
+
       .panel.open {
         font-size: 4em;
         font-weight: 100;
-        
+
       }
-      .panel.open p{
+
+      .panel.open p {
 
         opacity: .3;
       }
+
       .panel>*:first-child {
         transform: translatex(100%);
       }
@@ -435,28 +318,6 @@
       .active>*:last-child {
         transform: translatex(0);
       }
-
-      .feature {
-        flex-direction: column;
-        gap: 2rem;
-      }
-
-      .feature_textSection p {
-        font-size: medium;
-      }
-
-      h4 {
-        font-size: 0.9rem;
-      }
-
-      h5 {
-        font-size: 0.8rem;
-      }
-
-      .testimonial-section p {
-        font-size: 0.75rem;
-      }
-
       /* SHOWOFF MOBILE SCREEN */
 
       .showoff-plate {
@@ -475,36 +336,7 @@
         border-radius: 18px;
       }
     }
-  
-
-    /* THIS IS  GRID FOR BIG SCREEN SETTING NOT FOR MOBILE SCREEN */
-    @media screen and (min-width: 425px) {
-      .testimonials {
-        display: grid;
-        gap: 2rem;
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      .grid-span-2 {
-        grid-column: span 2;
-      }
-
-      .grid-row-span {
-        grid-column: 4;
-        grid-row: 1/3;
-      }
-    }
   </style>
-
-  <!--OWL COURASEL STYLE  -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -529,7 +361,7 @@
           <p>GLOW</p>
           <p>WITH</p>
           <p>BEAUTY</p>
-      </div>
+        </div>
         <div class="panel img3">
           <p>SHOW</p>
           <p>YOUR</p>
@@ -711,108 +543,9 @@
         </tbody>
       </table>
     </div>
-    <!-- ARTICLE SECTION -->
-
-    <div class="article">
-      <div class="testimonials">
-        <div class="card one grid-span-2">
-          <div class="tital-section">
-            <img src="Asset/@wallandiadesk (2).jpg" />
-            <div class="tital-section_tital">
-              <h4>ZISHAN AKHTAR</h4>
-              <h5>Web Developer</h5>
-            </div>
-          </div>
-          <div class="testimonial-section">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
-              pariatur. Totam recusandae est dolor nihil officia sit
-              exercitationem magnam culpa veritatis. Pariatur? Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Soluta illum quam
-              officia totam natus distinctio voluptates. Consectetur saepe
-              labore vero.
-            </p>
-          </div>
-        </div>
-
-        <div class="card two">
-          <div class="tital-section">
-            <img src="Asset/@wallandiadesk (2).jpg" />
-            <div class="tital-section_tital">
-              <h4>ZISHAN AKHTAR</h4>
-              <h5>Web Developer</h5>
-            </div>
-          </div>
-          <div class="testimonial-section">
-            <p>
-              Atque, pariatur. Totam recusandae veritatis. Pariatur? Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Soluta illum
-              . Consectetur saepe labore vero.
-            </p>
-          </div>
-        </div>
-
-        <div class="card three grid-row-span">
-          <div class="tital-section">
-            <img src="Asset/@wallandiadesk (2).jpg" />
-            <div class="tital-section_tital">
-              <h4>ZISHAN AKHTAR</h4>
-              <h5>Web Developer</h5>
-            </div>
-          </div>
-          <div class="testimonial-section">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
-              pariatur. Totam recusandae est dolor nihil officia sit
-              exercitationem magnam culpa veritatis. Pariatur? Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Soluta illum quam
-              officia totam natus distinctio voluptates. Consectetur saepe
-              labore vero.
-            </p>
-          </div>
-        </div>
-
-        <div class="card four">
-          <div class="tital-section">
-            <img src="Asset/@wallandiadesk (2).jpg" />
-            <div class="tital-section_tital">
-              <h4>ZISHAN AKHTAR</h4>
-              <h5>Web Developer</h5>
-            </div>
-          </div>
-          <div class="testimonial-section">
-            <p>
-              Atque, pariatur. Totam recusandae veritatis. Pariatur? Lorem
-              ipsum dolor sit amet consectetur adipisicing elit. Soluta illum
-              . Consectetur saepe labore vero.
-            </p>
-          </div>
-        </div>
-
-        <div class="card five grid-span-2">
-          <div class="tital-section">
-            <img src="Asset/@wallandiadesk (2).jpg" />
-            <div class="tital-section_tital">
-              <h4>ZISHAN AKHTAR</h4>
-              <h5>Web Developer</h5>
-            </div>
-          </div>
-          <div class="testimonial-section">
-            <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque,
-              pariatur. Totam recusandae est dolor nihil officia sit
-              exercitationem magnam culpa veritatis. Pariatur? Lorem ipsum
-              dolor sit amet consectetur adipisicing elit. Soluta illum quam
-              officia totam natus distinctio voluptates. Consectetur saepe
-              labore vero.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- FEATURE SECTION -->
 
-    <div class="feature" id="feature">
+    <!-- 
       <div class="feature_textSection">
         <p>
           "For 150 years, our family's enchanting journey in this business has
@@ -846,7 +579,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- FOOTER SECTION -->
   <footer>
@@ -869,36 +602,6 @@
     panels.forEach((panel) => panel.addEventListener("click", toggleActive));
   </script>
 
-  <!-- OWL COURSEL CDN & JS CODE-->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
-    integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-    integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script>
-    $(".owl-carousel").owlCarousel({
-      loop: true,
-      margin: 10,
-      nav: false,
-      autoplay: true,
-      autoplayTimeout: 2000,
-      dots: true,
-      responsive: {
-        0: {
-          items: 1,
-        },
-        600: {
-          items: 1,
-          stagePadding: 50,
-        },
-        1000: {
-          items: 1,
-        },
-      },
-    });
-  </script>
 </body>
 
 </html>
